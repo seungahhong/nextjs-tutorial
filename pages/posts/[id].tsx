@@ -12,7 +12,6 @@ interface PostProps {
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const postData = await getPostData(params?.id as string);
-  console.log(postData);
   return {
     props: {
       ...postData,
