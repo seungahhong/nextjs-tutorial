@@ -1,6 +1,8 @@
 import type { NextPage, GetServerSideProps } from "next";
+import { useRouter } from "next/router";
 import Template from "../components/base/Template";
 import { getAllPostsData } from "../lib/posts";
+import LinkButton from "../styles/components/linkButton";
 
 interface PostProps {
   allPostsData: {
@@ -20,17 +22,27 @@ export const getServerSideProps: GetServerSideProps = async () => {
 };
 
 const Home: NextPage<PostProps> = ({ allPostsData }) => {
+  const router = useRouter();
+
   return (
     <Template title="" description="" url="" author="">
       <h2>Blog </h2>
       <ul>
         {allPostsData.map(({ id, date, title }) => (
           <li key={id}>
-            {id}
-            <br />
-            {title}
-            <br />
-            {date}
+            <LinkButton
+              handleClick={(e) =>
+                router.push(`/posts/${encodeURIComponent(id)}`)
+              }
+            >
+              <>
+                {id}
+                <br />
+                {title}
+                <br />
+                {date}
+              </>
+            </LinkButton>
           </li>
         ))}
       </ul>

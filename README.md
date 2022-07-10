@@ -33,6 +33,12 @@ $ yarn run start
 # lint Run
 $ yarn run lint
 
+# docker image build
+$ docker build -t nextjs-tutorial .
+
+# docker Run
+$ docker run -p 3000:3000 nextjs-tutorial
+
 ```
 
 ## Download
