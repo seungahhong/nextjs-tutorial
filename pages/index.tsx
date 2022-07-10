@@ -2,7 +2,7 @@ import type { NextPage, GetServerSideProps } from "next";
 import { useRouter } from "next/router";
 import Template from "../components/base/Template";
 import { getAllPostsData } from "../lib/posts";
-import LinkButton from "../styles/components/linkButton";
+import LinkButton from "../styles/components/LinkButton";
 
 interface PostProps {
   allPostsData: {

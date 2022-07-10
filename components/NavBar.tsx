@@ -5,7 +5,7 @@ import Link from "next/link";
 const Container = styled.header`
   width: 100%;
   padding: 12px 0;
-  position: sticky;
+  position: fixed;
   top: 0;
   background: white;
 `;
