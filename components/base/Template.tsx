@@ -1,6 +1,5 @@
 import React, { FunctionComponent, ReactNode } from "react";
 import Head from "next/head";
-import GlobalStyles from "../../styles/components/globalStyles";
 
 interface TemplateProps {
   title: string;
@@ -38,7 +37,6 @@ const Template: FunctionComponent<TemplateProps> = ({
         <meta name="twitter:site" content={author} />
         <meta name="twitter:creator" content={author} />
       </Head>
-      <GlobalStyles />
       {children}
     </>
   );

@@ -4,15 +4,15 @@ import Link from "next/link";
 
 const Container = styled.header`
   width: 100%;
-  padding: 12px;
+  padding: 12px 0;
   position: sticky;
   top: 0;
+  background: white;
 `;
 
 const GNB = styled.div`
   display: flex;
   justify-content: space-between;
-  max-width: 1024px;
   height: 40px;
   margin: 0 auto;
 

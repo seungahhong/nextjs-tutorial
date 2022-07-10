@@ -1,7 +1,9 @@
+import type { ReactElement } from "react";
 import type { NextPage, GetServerSideProps } from "next";
 
 import Template from "../../components/base/Template";
 import { getPostData } from "../../lib/posts";
+import { markdownRenderStyles } from "../../styles/markdownStyles";
 
 interface PostProps {
   id: string;
@@ -29,7 +31,10 @@ const Posts: NextPage<PostProps> = ({ id, date, title, contentHtml }) => {
       <br />
       {date}
       <br />
-      <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+      <article
+        className={markdownRenderStyles}
+        dangerouslySetInnerHTML={{ __html: contentHtml }}
+      />
     </Template>
   );
 };
