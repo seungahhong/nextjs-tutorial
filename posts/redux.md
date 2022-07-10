@@ -9,7 +9,7 @@ date: "2021-12-30"
 
 상태에 어떠한 변화가 필요하게 될 땐, 우리는 액션이란 것을 발생시킵니다. 이는, 하나의 객체로 표현되는데요, 액션 객체는 다음과 같은 형식으로 이뤄져있습니다.
 
-```javascript
+```js
 {
   type: "TOGGLE_VALUE";
 }
@@ -17,7 +17,7 @@ date: "2021-12-30"
 
 액션 객체는 type 필드를 필수적으로 가지고 있어야하고 그 외의 값들은 개발자 마음대로 넣어줄 수 있습니다.
 
-```javascript
+```js
 {
     type: "ADD_TODO",
     data: {
@@ -31,7 +31,7 @@ date: "2021-12-30"
 
 액션 생성함수는, 액션을 만드는 함수입니다. 단순히 파라미터를 받아와서 액션 객체 형태로 만들어주죠.
 
-```javascript
+```js
 function changeColor(color) {
   return {
     type: "CHANGE_COLOR",
@@ -49,7 +49,7 @@ const changeColor = (color) => ({
 
 리듀서는 변화를 일으키는 함수입니다. 리듀서는 두가지의 파라미터를 받아옵니다.
 
-```javascript
+```js
 function reducer(state, action) {
   if (state === undefined) {
     return { color: "yellow" };
@@ -70,7 +70,7 @@ function reducer(state, action) {
 
 리덕스에서는 한 애플리케이션 당 하나의 스토어를 만들게 됩니다. 스토어 안에는, 현재의 앱 상태와, 리듀서가 들어가있고, 추가적으로 몇가지 내장 함수들이 있습니다.
 
-```javascript
+```js
 var store = Redux.createStore(reducer);
 ```
 

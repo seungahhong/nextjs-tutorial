@@ -17,6 +17,7 @@ const Container = styled.div`
 
 const Content = styled.main`
   flex: 1;
+  margin-top: 64px;
 `;
 
 const Layout: FunctionComponent<LayoutProps> = ({ children }) => {

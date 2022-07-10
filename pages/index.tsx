@@ -28,8 +28,8 @@ const Home: NextPage<PostProps> = ({ allPostsData }) => {
     <Template title="" description="" url="" author="">
       <h2>Blog </h2>
       <ul>
-        {allPostsData.map(({ id, date, title }) => (
-          <li key={id}>
+        {allPostsData.map(({ id, date, title }, index) => (
+          <li key={`${id}${index}`}>
             <LinkButton
               handleClick={(e) =>
                 router.push(`/posts/${encodeURIComponent(id)}`)
